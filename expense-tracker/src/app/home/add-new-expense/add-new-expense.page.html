@@ -1,0 +1,24 @@
+<ion-card >
+  <ion-card-header>
+    <ion-card-title>Add New Expense</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Reason</ion-label>
+        <ion-input input tye="text"  [(ngModel)]="expenseReason" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Amount</ion-label>
+        <ion-input input tye="Number" [(ngModel)]="expenseAmount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">MM/DD/YYYY</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="expenseDate"></ion-datetime>
+      </ion-item>
+      <div style="margin-top: 10px;text-align: center;display: flex; justify-content: space-around;">
+        <ion-button fill="outline" (click)="clear()" color="danger">Clear</ion-button>
+        <ion-button fill="outline" (click)="addExpense()">Add Expense</ion-button>
+      </div>
+  </ion-card-content>
+</ion-card>
